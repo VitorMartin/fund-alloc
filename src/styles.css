@@ -1,4 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 
+:root {
+    --min_screen_height: 1280px;
+    --min_screen_width: 720px;
+    
+    --min_list_height: 300px;
+    --min_list_width: 600px;
+}
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
