@@ -1,0 +1,8 @@
+.icon {
+    margin-right: 5px;
+}
+
+.inline-block-child {
+    display: inline-block;
+    vertical-align: middle;
+}

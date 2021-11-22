@@ -1,0 +1,7 @@
+<div class="list">
+    <mat-list>
+        <mat-accordion multi="true">
+            <app-fund *ngFor="let fund of this.funds" [fund]="fund"></app-fund>
+        </mat-accordion>
+    </mat-list>
+</div>

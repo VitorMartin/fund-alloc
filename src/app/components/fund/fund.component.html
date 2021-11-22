@@ -1,0 +1,18 @@
+<mat-expansion-panel>
+    <mat-expansion-panel-header>
+    <mat-panel-title>
+        <div class='parent'>
+            <div class='child inline-block-child'>
+                <mat-icon class="icon" *ngIf="fund.has_break"> report_problem </mat-icon>
+            </div>
+            <div class='child inline-block-child'>
+                {{ title }}
+            </div>
+        </div>
+    </mat-panel-title>
+    <mat-panel-description>
+        Available: {{ fund.avail_princ }}
+    </mat-panel-description>
+    </mat-expansion-panel-header>
+    <p>This must show table of amortization</p>
+</mat-expansion-panel>
