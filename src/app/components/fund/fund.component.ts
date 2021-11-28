@@ -16,7 +16,7 @@ export class FundComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.title = `KOLD${this.fund.kold}: ${this.fund.total_princ} ${this.fund.ccy} - ${this.fund.maturity}`;
+    this.title = `KOLD${this.fund.kold}: ${this.fund.princ} ${this.fund.ccy} - ${this.fund.venc}`;
   }
 
 }
