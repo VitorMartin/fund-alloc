@@ -1,5 +1,3 @@
-import { CCY } from "./ccy";
-
 export class Fund_Model {
     ccy: string;
     dealId: bigint;
