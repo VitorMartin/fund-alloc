@@ -1,9 +1,9 @@
 export class Break_Model {
-    date: string;
+    data: string;
     val: number;
 
-    constructor(date: string, val: number) {
-        this.date = date;
+    constructor(data: string, val: number) {
+        this.data = data;
         this.val = val;
     }
 }

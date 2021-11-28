@@ -1,3 +1,5 @@
+export const basedate = new Date().toISOString().split('T')[0];
+
 export const http_config = {
     protocol: 'http',
     host: 'localhost',
@@ -20,4 +22,11 @@ export const key = {
     kold: 'kold',
     princ: 'princ',
     flow: 'flow'
+}
+
+export const flow_types = {
+    fund: 'fund',
+    desemb: 'desemb',
+    amort_fund: 'amort_fund',
+    amort_desemb: 'amort_desemb'
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { key } from "src/app/api/http.config";
+import { key } from "src/app/common/config";
 
 import { ApiService } from "src/app/api/api.service";
 import { Fund_Model } from 'src/app/models/fund';

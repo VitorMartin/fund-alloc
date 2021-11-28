@@ -6,3 +6,11 @@
     display: inline-block;
     vertical-align: middle;
 }
+
+.mat-column-data, .mat-column-type, .mat-column-val, .mat-column-avail_aft {
+    padding: 8px;
+}
+
+table {
+    width: 100%;
+}

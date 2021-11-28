@@ -10,7 +10,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { ScrollingModule } from '@angular/cdk/scrolling'
+import { ScrollingModule } from '@angular/cdk/scrolling';
+import { MatTableModule } from '@angular/material/table';
 
 
 import { FundComponent } from './components/fund/fund.component';
@@ -32,7 +33,8 @@ import { FundListComponent } from './components/fund-list/fund-list.component';
     MatCardModule,
     MatIconModule,
     MatListModule,
-    ScrollingModule
+    ScrollingModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
