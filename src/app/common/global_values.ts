@@ -24,9 +24,15 @@ export const key = {
     flow: 'flow'
 }
 
-export const flow_types = {
-    fund: 'fund',
-    desemb: 'desemb',
-    amort_fund: 'amort_fund',
-    amort_desemb: 'amort_desemb'
+export enum FLOW_TYPE {
+    fund = 'fund',
+    desemb = 'desemb',
+    amort_fund = 'amort_fund',
+    amort_desemb = 'amort_desemb'
+}
+
+export enum CCY {
+    USD = 'USD',
+    EUR = 'EUR',
+    BRL = 'BRL'
 }

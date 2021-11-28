@@ -1,8 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 import { ApiService } from "src/app/api/api.service";
-import { flow_types, key } from 'src/app/common/config';
-import { basedate } from 'src/app/common/config';
+import { FLOW_TYPE, key, basedate } from 'src/app/common/global_values';
 import { Amort_Desemb } from 'src/app/models/amort_desemb';
 import { Break_Model } from 'src/app/models/break';
 import { Desemb_Model } from 'src/app/models/desemb';
@@ -45,7 +44,7 @@ export class FundComponent implements OnInit {
       let breaks: Break_Model[] = [];
       this.flows.forEach((flow: Flow_Model) => {
 
-        if (flow.type == flow_types.desemb) {
+        if (flow.type == FLOW_TYPE.desemb) {
           this.fund.avail -= flow.val;
         }
 

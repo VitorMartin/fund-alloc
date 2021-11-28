@@ -1,15 +1,16 @@
+import { CCY } from "../common/global_values";
 import { Fund_Model } from "./fund";
 
 export class Desemb_Model {
     ccb: string;
-    ccy: string;
+    ccy: CCY;
     deal_id: bigint;
     fund: Fund_Model;
     ini: string;
     princ: number;
     venc: string;
 
-    constructor(ccb: string, ccy: string, deal_id: bigint, fund: Fund_Model, ini: string, princ: number, venc: string) {
+    constructor(ccb: string, ccy: CCY, deal_id: bigint, fund: Fund_Model, ini: string, princ: number, venc: string) {
         this.ccb = ccb;
         this.ccy = ccy;
         this.deal_id = deal_id;

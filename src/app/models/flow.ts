@@ -1,3 +1,4 @@
+import { FLOW_TYPE } from "../common/global_values";
 import { Amort_Desemb } from "./amort_desemb";
 import { Amort_Fund } from "./amort_fund";
 import { Desemb_Model } from "./desemb";
@@ -10,10 +11,10 @@ export class Flow_Model {
     desemb_princ: number;
     fund_princ: number;
     op: Fund_Model | Desemb_Model | Amort_Fund | Amort_Desemb
-    type: string;
+    type: FLOW_TYPE;
     val: number
 
-    constructor(type: string, val: number, avail_bef: number, avail_aft: number, data: string, desemb_princ: number, fund_princ: number) {
+    constructor(type: FLOW_TYPE, val: number, avail_bef: number, avail_aft: number, data: string, desemb_princ: number, fund_princ: number) {
         this.type = type;
         this.val = val;
         this.avai_bef = avail_bef;

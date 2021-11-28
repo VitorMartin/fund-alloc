@@ -1,5 +1,7 @@
+import { CCY } from "../common/global_values";
+
 export class Fund_Model {
-    ccy: string;
+    ccy: CCY;
     dealId: bigint;
     ini: string;
     kold: string;
@@ -9,7 +11,7 @@ export class Fund_Model {
     breaks: any[];
     has_break: boolean;
     
-    constructor(ccy: string, dealId: bigint, ini: string, kold: string, princ: number, venc: string, avail: number, breaks: any[]) {
+    constructor(ccy: CCY, dealId: bigint, ini: string, kold: string, princ: number, venc: string, avail: number, breaks: any[]) {
         this.ccy = ccy;
         this.dealId = dealId;
         this.ini = ini;

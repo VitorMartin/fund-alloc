@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import { HttpClient, HttpParams } from "@angular/common/http";
 
-import { http_config, route, key } from "src/app/common/config";
+import { http_config, route, key } from "src/app/common/global_values";
 import { Fund_Model } from 'src/app/models/fund';
 import { Flow_Model } from "../models/flow";
 
