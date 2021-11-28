@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 
 import { ApiService } from "src/app/api/api.service";
 import { key } from 'src/app/api/http.config';
+import { Break_Model } from 'src/app/models/break';
 import { Flow_Model } from 'src/app/models/flow';
 
 import { Fund_Model } from 'src/app/models/fund'
@@ -27,17 +28,19 @@ export class FundComponent implements OnInit {
       this.fund.avail = data[key.princ];
     })
 
-    // Fund breaks
+    // Fund flow and "has_break" tag
     this.api.get_fund_flow_observable(this.fund.kold).subscribe((data: any) => {
       const flow: Flow_Model[] = data[key.flow];
       
-      this.fund.has_break = false;
-      for (const f of flow) {
+      let breaks: Break_Model[] = [];
+      flow.forEach((f: Flow_Model) => {
         if (f.avail_aft < 0) {
-          this.fund.has_break = true;
-          break;
+          breaks.push(new Break_Model(f.date, f.avail_aft));
         }
-      }
+      });
+
+      this.fund.breaks = breaks;
+      this.fund.has_break = breaks.length > 0;
     })
   }
 

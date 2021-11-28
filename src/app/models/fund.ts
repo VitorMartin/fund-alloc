@@ -6,9 +6,10 @@ export class Fund_Model {
     princ: number;
     venc: string;
     avail: number;
+    breaks: any[];
     has_break: boolean;
     
-    constructor(ccy: string, dealId: bigint, ini: string, kold: string, princ: number, venc: string, avail: number, has_break: boolean) {
+    constructor(ccy: string, dealId: bigint, ini: string, kold: string, princ: number, venc: string, avail: number, breaks: any[], has_break: boolean) {
         this.ccy = ccy;
         this.dealId = dealId;
         this.ini = ini;
@@ -16,6 +17,7 @@ export class Fund_Model {
         this.princ = princ;
         this.venc = venc;
         this.avail = avail;
-        this.has_break = has_break;
+        this.breaks = breaks;
+        this.has_break = this.breaks.length > 0;
     }
 }
