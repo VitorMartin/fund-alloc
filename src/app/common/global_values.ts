@@ -11,7 +11,8 @@ export const http_config = {
 export const route = {
     fund: '/fund',
     fund_princ: '/fund/princ',
-    fund_flow: '/fund/flow'
+    fund_flow: '/fund/flow',
+    desemb: '/desemb'
 }
 
 export const key = {
@@ -21,7 +22,16 @@ export const key = {
     basedate: 'basedate',
     kold: 'kold',
     princ: 'princ',
-    flow: 'flow'
+    flow: 'flow',
+    ccb: 'ccb',
+    amortDesembs: 'amortDesembs',
+    type: 'type',
+    val: 'val',
+    avail_bef: 'availBefore',
+    avail_aft: 'availAfter',
+    data: 'data',
+    desemb_princ: 'desembPrinc',
+    fund_princ: 'fundPrinc'
 }
 
 export enum FLOW_TYPE {
@@ -35,4 +45,11 @@ export enum CCY {
     USD = 'USD',
     EUR = 'EUR',
     BRL = 'BRL'
+}
+
+export enum amort_column {
+    data = 'data',
+    type = 'type',
+    val = 'val',
+    avail_aft = 'avail_aft'
 }

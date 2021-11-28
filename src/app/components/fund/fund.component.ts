@@ -1,10 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 import { ApiService } from "src/app/api/api.service";
-import { FLOW_TYPE, key, basedate } from 'src/app/common/global_values';
-import { Amort_Desemb } from 'src/app/models/amort_desemb';
+import { FLOW_TYPE, key, basedate, amort_column } from 'src/app/common/global_values';
 import { Break_Model } from 'src/app/models/break';
-import { Desemb_Model } from 'src/app/models/desemb';
 import { Flow_Model } from 'src/app/models/flow';
 
 import { Fund_Model } from 'src/app/models/fund'
@@ -17,8 +15,11 @@ import { Fund_Model } from 'src/app/models/fund'
 export class FundComponent implements OnInit {
   basedate: string;
   title: string;
-  flows: Flow_Model[]
-  displayed_columns: string[] = ['data', 'type', 'val', 'avail_aft'];
+  flows: Flow_Model[];
+  amort_column = amort_column;
+  displayed_columns: string[] = [
+    amort_column.data, amort_column.type, amort_column.val, amort_column.avail_aft
+  ];
   
   @Input() fund: Fund_Model;
   
@@ -34,8 +35,8 @@ export class FundComponent implements OnInit {
       this.flows = data[key.flow];
       this.flows = this.flows.map((data: any) => {
         return new Flow_Model(
-          data['type'], data['val'], data['availBefore'], data['availAfter'],
-          data['data'], data['desembPrinc'], data['fundPrinc']
+          data[key.type], data[key.val], data[key.avail_bef], data[key.avail_aft],
+          data[key.data], data[key.desemb_princ], data[key.fund_princ]
           )
       })
 
