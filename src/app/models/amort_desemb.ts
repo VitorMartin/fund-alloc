@@ -2,7 +2,7 @@ import { CCY } from "src/app/common/global_values";
 
 import { Desemb_Model } from "./desemb";
 
-export class Amort_Desemb {
+export class Amort_Desemb_Model {
     amort_id: bigint;
     ccy: CCY;
     data: string;

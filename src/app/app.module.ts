@@ -16,12 +16,16 @@ import { MatTableModule } from '@angular/material/table';
 
 import { FundComponent } from './components/fund/fund.component';
 import { FundListComponent } from './components/fund-list/fund-list.component';
+import { DesembComponent } from './components/desemb/desemb.component';
+import { DesembListComponent } from './components/desemb-list/desemb-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FundComponent,
-    FundListComponent
+    FundListComponent,
+    DesembComponent,
+    DesembListComponent
   ],
   imports: [
     BrowserModule,

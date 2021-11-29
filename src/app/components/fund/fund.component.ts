@@ -1,7 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 import { ApiService } from "src/app/api/api.service";
-import { FLOW_TYPE, key, basedate, amort_column } from 'src/app/common/global_values';
+import { Number_Formatter } from 'src/app/common/formatter';
+import { FLOW_TYPE, key, basedate, AMORT_COLUMN } from 'src/app/common/global_values';
 import { Break_Model } from 'src/app/models/break';
 import { Flow_Model } from 'src/app/models/flow';
 
@@ -16,19 +17,20 @@ export class FundComponent implements OnInit {
   basedate: string;
   title: string;
   flows: Flow_Model[];
-  amort_column = amort_column;
+  amort_column = AMORT_COLUMN;
   displayed_columns: string[] = [
-    amort_column.data, amort_column.type, amort_column.val, amort_column.avail_aft
+    AMORT_COLUMN.data, AMORT_COLUMN.type, AMORT_COLUMN.val, AMORT_COLUMN.avail_aft
   ];
   
   @Input() fund: Fund_Model;
   
   constructor(private api: ApiService) {
-    this.basedate = basedate
+    this.basedate = basedate;
   }
 
   ngOnInit(): void {
-    this.title = `KOLD${this.fund.kold}: ${this.fund.princ} ${this.fund.ccy} - ${this.fund.venc}`;
+    const formatter = new Number_Formatter();
+    this.title = `KOLD${this.fund.kold}: ${formatter.format_ccy(this.fund.princ, this.fund.ccy)} ${this.fund.ccy} - ${this.fund.venc}`;
 
     this.api.get_fund_flow_observable(this.fund.kold).subscribe((data: any) => {
       // Getting flows array

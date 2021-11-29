@@ -1,0 +1,38 @@
+<mat-expansion-panel>
+    <mat-expansion-panel-header>
+    <mat-panel-title>
+        <div class='parent'>
+            <div class='child inline-block-child'>
+                {{ title }}
+            </div>
+        </div>
+    </mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <table mat-table [dataSource]="flows" class="mat-elevation-z0">
+
+        <ng-container class="table_column" matColumnDef={{amort_column.data}}>
+            <th mat-header-cell *matHeaderCellDef> Date </th>
+            <td mat-cell *matCellDef="let flow"> {{flow.data}} </td>
+        </ng-container>
+        
+        <ng-container class="table_column" matColumnDef={{amort_column.type}}>
+            <th mat-header-cell *matHeaderCellDef> Type </th>
+            <td mat-cell *matCellDef="let flow"> {{flow.type}} </td>
+        </ng-container>
+        
+        <ng-container class="table_column" matColumnDef={{amort_column.val}}>
+            <th mat-header-cell *matHeaderCellDef> Value </th>
+            <td mat-cell *matCellDef="let flow"> {{flow.val | number}} </td>
+        </ng-container>
+        
+        <ng-container class="table_column" matColumnDef={{amort_column.avail_aft}}>
+            <th mat-header-cell *matHeaderCellDef> Available After </th>
+            <td mat-cell *matCellDef="let flow"> {{flow.avail_aft | number}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayed_columns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayed_columns;"></tr>
+    </table>
+
+</mat-expansion-panel>

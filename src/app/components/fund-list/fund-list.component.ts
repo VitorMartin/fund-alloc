@@ -18,6 +18,12 @@ export class FundListComponent implements OnInit {
   ngOnInit(): void {
     this.api.get_funds_observable().subscribe((data: any) => {
       this.funds = data[key.funds];
+      this.funds = this.funds.map((data: any) => {
+        return new Fund_Model(
+          data[key.ccy], data[key.deal_id], data[key.ini], data[key.kold],
+          data[key.princ], data[key.venc], data[key.princ], undefined
+        )
+      });
     })
   }
 }

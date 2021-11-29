@@ -1,7 +1,7 @@
 import { CCY } from "../common/global_values";
 import { Fund_Model } from "./fund";
 
-export class Amort_Fund {
+export class Amort_Fund_Model {
     amort_id: bigint;
     ccy: CCY;
     data: string;

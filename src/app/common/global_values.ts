@@ -12,12 +12,15 @@ export const route = {
     fund: '/fund',
     fund_princ: '/fund/princ',
     fund_flow: '/fund/flow',
-    desemb: '/desemb'
+    desemb: '/desemb',
+    amort_desemb: '/amort_desemb'
 }
 
 export const key = {
     funds: 'funds',
+    desembs: 'desembs',
     fund: 'fund',
+    desemb: 'desemb',
     deal_id: 'dealId',
     basedate: 'basedate',
     kold: 'kold',
@@ -31,7 +34,11 @@ export const key = {
     avail_aft: 'availAfter',
     data: 'data',
     desemb_princ: 'desembPrinc',
-    fund_princ: 'fundPrinc'
+    fund_princ: 'fundPrinc',
+    ccy: 'ccy',
+    ini: 'ini',
+    venc: 'venc',
+    amort_id: 'amortId'
 }
 
 export enum FLOW_TYPE {
@@ -47,7 +54,7 @@ export enum CCY {
     BRL = 'BRL'
 }
 
-export enum amort_column {
+export enum AMORT_COLUMN {
     data = 'data',
     type = 'type',
     val = 'val',

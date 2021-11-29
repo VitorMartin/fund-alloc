@@ -1,0 +1,8 @@
+<div class="list">
+    <mat-list>
+        <h2 class="header">Desembs</h2>
+        <mat-accordion multi="true">
+            <app-desemb *ngFor="let desemb of this.desembs" [desemb]="desemb"></app-desemb>
+        </mat-accordion>
+    </mat-list>
+</div>

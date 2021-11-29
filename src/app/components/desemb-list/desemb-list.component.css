@@ -1,0 +1,11 @@
+@import "../../../styles.css";
+
+.list {
+    margin: 8px;
+    width: 50%;
+    min-width: var(--min_list_width);
+}
+
+.header {
+    text-align: center;
+}
