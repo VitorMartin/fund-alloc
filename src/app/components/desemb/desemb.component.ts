@@ -57,28 +57,5 @@ export class DesembComponent implements OnInit {
         avail_bef = avail_aft;
       });
     })
-    // this.api.get_desemb_amorts_observable(this.desemb.deal_id).subscribe((data: any) => {
-    //   const data_flow: any[] = data[key.amortDesembs]
-    //   this.flows = [
-    //     ...this.flows,
-    //     new Flow_Model(
-    //       FLOW_TYPE.desemb, this.desemb.princ, 0, this.desemb.princ, this.desemb.ini, this.desemb.princ, this.desemb.fund?.princ
-    //     )
-    //   ]
-      
-    //   let princ_bef = this.desemb.princ
-    //   data_flow.forEach((flow: any) => {
-    //     let val = flow[key.val]
-    //     let princ_aft = princ_bef - val
-    //     let fund_princ = this.desemb.fund ? this.desemb.fund.princ : undefined;
-    //     this.flows = [
-    //       ...this.flows,
-    //       new Flow_Model(
-    //         FLOW_TYPE.amort_desemb, flow[key.val], princ_bef, princ_aft, flow[key.data], this.desemb.princ, fund_princ
-    //       )
-    //     ]
-    //     princ_bef = princ_aft;
-    //   });
-    // })
   }
 }
