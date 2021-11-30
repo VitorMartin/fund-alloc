@@ -1,0 +1,54 @@
+#header-div {
+    background-color: rgb(0, 1, 146);
+    width: 100%;
+    white-space: nowrap;
+}
+
+#menu-div {
+    width: fit-content;
+    padding-right: 0px;
+}
+
+#logo-div {
+    width: fit-content;
+}
+
+#logo-img {
+    height: inherit;
+}
+
+#title-div {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 500;
+    font-size: 48px;
+    width: fit-content;
+    height: 100%;
+    color: white;
+    padding-left: 64px;
+}
+
+#subtitle-div {
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 500;
+    font-size: 32px;
+    width: fit-content;
+    height: 100%;
+    color: white;
+    padding-left: 64px;
+}
+
+.btn-menu {
+    color: white;
+}
+
+.inline-block-child {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.parent div {
+    height: 50px;
+    width: 100%;
+    padding: 20px;
+    margin: 0px;
+}

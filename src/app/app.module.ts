@@ -12,12 +12,14 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { MatTableModule } from '@angular/material/table';
+import {MatMenuModule} from '@angular/material/menu';
 
 
 import { FundComponent } from './components/fund/fund.component';
 import { FundListComponent } from './components/fund-list/fund-list.component';
 import { DesembComponent } from './components/desemb/desemb.component';
 import { DesembListComponent } from './components/desemb-list/desemb-list.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { DesembListComponent } from './components/desemb-list/desemb-list.compon
     FundComponent,
     FundListComponent,
     DesembComponent,
-    DesembListComponent
+    DesembListComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +41,8 @@ import { DesembListComponent } from './components/desemb-list/desemb-list.compon
     MatIconModule,
     MatListModule,
     ScrollingModule,
-    MatTableModule
+    MatTableModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
