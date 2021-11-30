@@ -34,7 +34,6 @@ export class DesembListComponent implements OnInit {
       if (this.get_desembs_to_fund) {
         for (let i = 0; i < this.desembs.length; i++) {
           const desemb = this.desembs[i];
-          console.log(desemb.fund);
           if (desemb.fund) {
             this.desembs.splice(i, 1)
             i--
