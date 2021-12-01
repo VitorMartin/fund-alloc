@@ -1,34 +1,36 @@
-<div id="header-div" class='parent'>
-    <div id="menu-div" class='child inline-block-child'>
-        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Header menu">
-            <mat-icon class="btn-menu">menu</mat-icon>
-        </button>
-        <mat-menu #menu="matMenu">
-            <button mat-menu-item>
-                <mat-icon>panorama_fish_eye</mat-icon>
-                <span>Desembs</span>
+<div class="header">
+    <div class="inner-header">
+        <div class="menu-container">
+            <button id="menu-btn" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Header menu">
+                <mat-icon id="menu-icon">menu</mat-icon>
             </button>
-            <button mat-menu-item>
-                <mat-icon>shopping_basket</mat-icon>
-                <span>Funds</span>
-            </button>
-            <button mat-menu-item>
-                <mat-icon>swap_horiz</mat-icon>
-                <span>Changes</span>
-            </button>
-            <button mat-menu-item>
-                <mat-icon>warning</mat-icon>
-                <span>Breaks</span>
-            </button>
-        </mat-menu>
-    </div>
-    <div id="logo-div" class='child inline-block-child'>
-        <img id="logo-img" src="../../../assets/midia/rbb_logo_white_no_bg.png" alt="RBB logo">
-    </div>
-    <div id="title-div" class="child inline-block-child">
-        FUND ALLOC 3.0
-    </div>
-    <div id="subtitle-div" class="child inline-block-child">
-        TREASURY TRG
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                    <mat-icon>panorama_fish_eye</mat-icon>
+                    <span>Desembs</span>
+                </button>
+                <button mat-menu-item>
+                    <mat-icon>shopping_basket</mat-icon>
+                    <span>Funds</span>
+                </button>
+                <button mat-menu-item>
+                    <mat-icon>swap_horiz</mat-icon>
+                    <span>Changes</span>
+                </button>
+                <button mat-menu-item>
+                    <mat-icon>warning</mat-icon>
+                    <span>Breaks</span>
+                </button>
+            </mat-menu>
+        </div>
+        <div class="logo-container">
+            <img id="logo-img" src="../../../assets/midia/rbb_logo_white_no_bg.png" alt="RBB logo">
+        </div>
+        <div class="subtitle-container">
+            <span id="subtitle-span">Fund Alloc 3.0</span>
+        </div>
+        <div class="title-container">
+            <span id="title-span">Treasury - TRG</span>
+        </div>
     </div>
 </div>
