@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./desembs-page.component.css']
 })
 export class DesembsPageComponent implements OnInit {
+  all_desembs: boolean = true;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  ngOnChanges(): void {
+    console.log('change');
+  }
 }

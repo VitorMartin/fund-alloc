@@ -43,4 +43,7 @@ export class DesembListComponent implements OnInit {
     })
   }
 
+  ngOnChanges(): void {
+    this.ngOnInit()
+  }
 }

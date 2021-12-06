@@ -1,1 +1,12 @@
-<p>desembs-page works!</p>
+<main>
+    <div>
+        <br>
+        <h1>
+            Desembs
+        </h1>
+        <button id="all_desembs_btn" mat-raised-button (click)="all_desembs = ! all_desembs">
+            All desembs - {{all_desembs}}
+        </button>
+        <app-desemb-list [get_desembs_to_fund]="all_desembs"></app-desemb-list>
+    </div>
+</main>

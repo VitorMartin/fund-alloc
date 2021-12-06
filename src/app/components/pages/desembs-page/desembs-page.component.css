@@ -1,0 +1,20 @@
+#all_desembs_btn {
+    background-color: rgb(252, 101, 32);
+}
+
+main {
+    width: auto;
+    margin: auto;
+    text-align: center;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+app-desemb-list {
+    display: inline-block;
+    width: auto;
+    margin: auto;
+}
