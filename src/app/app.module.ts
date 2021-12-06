@@ -23,6 +23,7 @@ import { FundListComponent } from './components/fund-list/fund-list.component';
 import { DesembComponent } from './components/desemb/desemb.component';
 import { DesembListComponent } from './components/desemb-list/desemb-list.component';
 import { HeaderComponent } from './components/header/header.component';
+import { NotFoundPageComponent } from './components/not-found-page/not-found-page.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { HeaderComponent } from './components/header/header.component';
     DesembsPageComponent,
     ChangesPageComponent,
     HomePageComponent,
+    NotFoundPageComponent,
   ],
   imports: [
     BrowserModule,
