@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSlideToggleChange } from '@angular/material/slide-toggle';
 
 @Component({
   selector: 'app-desembs-page',
@@ -6,14 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./desembs-page.component.css']
 })
 export class DesembsPageComponent implements OnInit {
-  all_desembs: boolean = true;
+  all_desembs: boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
-  ngOnChanges(): void {
-    console.log('change');
+  
+  all_desembs_change(e: MatSlideToggleChange): void {
+    this.all_desembs = e.checked
   }
 }

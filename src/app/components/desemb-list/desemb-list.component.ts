@@ -14,12 +14,12 @@ export class DesembListComponent implements OnInit {
   desembs: Desemb_Model[];
   header: string
   
-  @Input() get_desembs_to_fund: boolean = false;
+  @Input() get_all_desembs: boolean = false;
 
   constructor(private api: ApiService) { }
 
   ngOnInit(): void {
-    this.header = this.get_desembs_to_fund ? 'Desembs to fund' : 'Desembs'
+    this.header = this.get_all_desembs ? 'Desembs' : 'Desembs to fund'
     
     this.api.get_desembs_observable().subscribe((data: any) => {
       this.desembs = data[key.desembs];
@@ -31,7 +31,7 @@ export class DesembListComponent implements OnInit {
       });
       
       
-      if (this.get_desembs_to_fund) {
+      if (! this.get_all_desembs) {
         for (let i = 0; i < this.desembs.length; i++) {
           const desemb = this.desembs[i];
           if (desemb.fund) {

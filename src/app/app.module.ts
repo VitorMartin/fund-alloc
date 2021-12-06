@@ -12,7 +12,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { MatTableModule } from '@angular/material/table';
-import {MatMenuModule} from '@angular/material/menu';
+import { MatMenuModule } from '@angular/material/menu';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 import { HomePageComponent } from './components/pages/home-page/home-page.component';
 import { FundsPageComponent } from './components/pages/funds-page/funds-page.component';
@@ -52,7 +53,8 @@ import { HeaderComponent } from './components/header/header.component';
     MatListModule,
     ScrollingModule,
     MatTableModule,
-    MatMenuModule
+    MatMenuModule,
+    MatSlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

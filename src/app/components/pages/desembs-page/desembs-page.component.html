@@ -4,10 +4,10 @@
         <h1>
             Desembs
         </h1>
-        <button id="all_desembs_btn" mat-raised-button (click)="all_desembs = ! all_desembs">
-            All desembs - {{all_desembs}}
-        </button>
+        <mat-slide-toggle id="all_desembs_btn" (change)="all_desembs_change($event)" [checked]="all_desembs">
+            All desembs?
+        </mat-slide-toggle>
         <br>
-        <app-desemb-list [get_desembs_to_fund]="all_desembs"></app-desemb-list>
+        <app-desemb-list [get_all_desembs]="all_desembs"></app-desemb-list>
     </div>
 </main>
