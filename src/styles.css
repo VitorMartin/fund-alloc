@@ -9,6 +9,7 @@
 
     --blue: rgb(0, 1, 149);
     --orange: rgb(252, 101, 32);
+    --orange_bg: rgba(252, 101, 32, .15)
 }
 
 
@@ -22,6 +23,7 @@ html, body {
 }
 
 body {
+    background-color: var(--orange_bg);
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
