@@ -5,25 +5,25 @@
                 <mat-icon id="menu-icon">menu</mat-icon>
             </button>
             <mat-menu #menu="matMenu">
-                <button mat-menu-item>
+                <button mat-menu-item routerLink="/breaks">
                     <mat-icon>warning</mat-icon>
                     <span>Breaks</span>
                 </button>
-                <button mat-menu-item>
-                    <mat-icon>panorama_fish_eye</mat-icon>
-                    <span>Desembs</span>
-                </button>
-                <button mat-menu-item>
+                <button mat-menu-item routerLink="/funds">
                     <mat-icon>shopping_basket</mat-icon>
                     <span>Funds</span>
                 </button>
-                <button mat-menu-item>
+                <button mat-menu-item routerLink="/desembs">
+                    <mat-icon>panorama_fish_eye</mat-icon>
+                    <span>Desembs</span>
+                </button>
+                <button mat-menu-item routerLink="/changes">
                     <mat-icon>swap_horiz</mat-icon>
                     <span>Changes</span>
                 </button>
             </mat-menu>
         </div>
-        <div class="logo-container">
+        <div class="logo-container" routerLink="/home">
             <img id="logo-img" src="../../../assets/midia/rbb_logo_white_no_bg.png" alt="RBB logo">
         </div>
         <div class="subtitle-container">
