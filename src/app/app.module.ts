@@ -14,16 +14,16 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
 import { MatTableModule } from '@angular/material/table';
 import {MatMenuModule} from '@angular/material/menu';
 
-import { HomePageComponent } from './components/home-page/home-page.component';
-import { FundsPageComponent } from './components/funds-page/funds-page.component';
-import { DesembsPageComponent } from './components/desembs-page/desembs-page.component';
-import { ChangesPageComponent } from './components/changes-page/changes-page.component';
+import { HomePageComponent } from './components/pages/home-page/home-page.component';
+import { FundsPageComponent } from './components/pages/funds-page/funds-page.component';
+import { DesembsPageComponent } from './components/pages/desembs-page/desembs-page.component';
+import { ChangesPageComponent } from './components/pages/changes-page/changes-page.component';
+import { NotFoundPageComponent } from './components/pages/not-found-page/not-found-page.component';
 import { FundComponent } from './components/fund/fund.component';
 import { FundListComponent } from './components/fund-list/fund-list.component';
 import { DesembComponent } from './components/desemb/desemb.component';
 import { DesembListComponent } from './components/desemb-list/desemb-list.component';
 import { HeaderComponent } from './components/header/header.component';
-import { NotFoundPageComponent } from './components/not-found-page/not-found-page.component';
 
 @NgModule({
   declarations: [

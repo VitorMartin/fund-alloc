@@ -1,0 +1,16 @@
+main {
+    width: auto;
+    margin: auto;
+    text-align: center;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+app-fund-list {
+    display: inline-block;
+    width: auto;
+    margin: auto;
+}

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 import { key } from "src/app/common/global_values";
 
@@ -13,6 +13,8 @@ import { Fund_Model } from 'src/app/models/fund';
 export class FundListComponent implements OnInit {
   funds: Fund_Model[];
 
+  @Input() get_breaks: boolean = false;
+
   constructor(private api: ApiService) { }
 
   ngOnInit(): void {
@@ -24,6 +26,10 @@ export class FundListComponent implements OnInit {
           data[key.princ], data[key.venc], data[key.princ], undefined
         )
       });
+
+      if (this.get_breaks) {
+        this.funds = this.funds.filter((fund: Fund_Model) => { fund.avail < 0 })
+      }
     })
   }
 }

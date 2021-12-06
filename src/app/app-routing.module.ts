@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BreaksPageComponent } from './components/breaks-page/breaks-page.component';
-import { ChangesPageComponent } from './components/changes-page/changes-page.component';
-import { DesembsPageComponent } from './components/desembs-page/desembs-page.component';
-import { FundsPageComponent } from './components/funds-page/funds-page.component';
-import { HomePageComponent } from './components/home-page/home-page.component';
-import { NotFoundPageComponent } from './components/not-found-page/not-found-page.component';
+import { BreaksPageComponent } from './components/pages/breaks-page/breaks-page.component';
+import { ChangesPageComponent } from './components/pages/changes-page/changes-page.component';
+import { DesembsPageComponent } from './components/pages/desembs-page/desembs-page.component';
+import { FundsPageComponent } from './components/pages/funds-page/funds-page.component';
+import { HomePageComponent } from './components/pages/home-page/home-page.component';
+import { NotFoundPageComponent } from './components/pages/not-found-page/not-found-page.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
