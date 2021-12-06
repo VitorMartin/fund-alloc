@@ -32,7 +32,7 @@ export class DesembComponent implements OnInit {
 
   ngOnInit(): void {
     const formatter = new Number_Formatter();
-    this.title = `${this.desemb.fund ? '' : '*'}CCB ${this.desemb.ccb}: ${formatter.format_ccy(this.desemb.princ, this.desemb.ccy)} ${this.desemb.ccy} - ${this.desemb.venc}`;
+    this.title = `CCB ${this.desemb.ccb}: ${formatter.format_ccy(this.desemb.princ, this.desemb.ccy)} ${this.desemb.ccy} - ${this.desemb.venc}`;
     this.api.get_desemb_amorts_observable(this.desemb.deal_id).subscribe((data: any) => {
       let amorts: Amort_Desemb_Model[] = data[key.amortDesembs];
       amorts = amorts.map((amorts_data: any) => {
