@@ -36,6 +36,7 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
+fund_alloc_api.exe.lnk
 
 # System Files
 .DS_Store

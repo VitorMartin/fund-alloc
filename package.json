@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start-back": "start /WAIT /B ../../../back/dist/bin/fund_alloc_api.exe",
+    "start-back": "start /WAIT /B ./fund_alloc_api.exe.lnk",
     "start-front-local": "ng serve",
     "start-front-server": "lite-server --baseDir=\"dist/fund-alloc\"",
     "build": "ng build",
