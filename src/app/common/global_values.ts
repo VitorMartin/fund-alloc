@@ -3,9 +3,9 @@ export const basedate = new Date().toISOString().split('T')[0];
 export const http_config = {
     protocol: 'http',
     host: 'localhost',
-    port: '80',
+    port: '8080',
     root: '',
-    base_url: 'http://localhost:80'
+    base_url: 'http://localhost:8080'
 }
 
 export const route = {
