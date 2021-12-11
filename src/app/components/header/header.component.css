@@ -48,9 +48,7 @@
 
 #logo-img {
     display: table-cell;
-    height: 80%;
-    padding: 15% 0 0 0;
-    vertical-align: middle;
+    height: 100%;
 }
 
 .title-container {
