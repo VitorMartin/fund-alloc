@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, SkipSelf } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 import { key } from "src/app/common/global_values";
 

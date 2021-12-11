@@ -13,6 +13,7 @@ export const route = {
     fund_princ: '/fund/princ',
     fund_flow: '/fund/flow',
     desemb: '/desemb',
+    avail_funds: '/desemb/availability',
     amort_desemb: '/amort_desemb'
 }
 
@@ -38,7 +39,8 @@ export const key = {
     ccy: 'ccy',
     ini: 'ini',
     venc: 'venc',
-    amort_id: 'amortId'
+    amort_id: 'amortId',
+    override: 'override',
 }
 
 export enum FLOW_TYPE {

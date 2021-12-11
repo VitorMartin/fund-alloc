@@ -1,6 +1,6 @@
 <div class="list">
     <mat-list>
-        <h2 class="header">Funds</h2>
+        <h2 class="header">{{ title }}</h2>
         <mat-accordion multi="true">
             <app-fund *ngFor="let fund of this.funds" [fund]="fund"></app-fund>
         </mat-accordion>

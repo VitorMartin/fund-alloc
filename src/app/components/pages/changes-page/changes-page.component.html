@@ -1,1 +1,25 @@
-<p>changes-page works!</p>
+<div id="root">
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label>CCB</mat-label>
+        <mat-select name="form_ccb" [(ngModel)]="form_ccb" (selectionChange)="ccb_selection_change_handler(form_ccb)">
+            <mat-option *ngFor="let ccb of ccbs" value="{{ ccb }}">{{ ccb }}</mat-option>
+          </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>KOLD</mat-label>
+        <mat-select name="form_kold" [(ngModel)]="form_kold">
+          <mat-option *ngFor="let kold of kolds" value="{{ kold }}">{{ kold }}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <button mat-flat-button (click)="confirm_btn_handler(override ? override_ccb : form_ccb, override ? override_kold : form_kold, override)">Confirm</button>
+    <mat-checkbox [(ngModel)]="override">override?</mat-checkbox>
+    <br>
+    <input placeholder="CCB to override" [disabled]="!override" [type]="override ? 'text' : 'hidden'" [(ngModel)]="override_ccb">
+    <input placeholder="KOLD to override" [disabled]="!override" [type]="override ? 'text' : 'hidden'" [(ngModel)]="override_kold">
+    <br>
+    <br>
+    <app-desemb-list [get_all_desembs]="false"></app-desemb-list>
+    <br>
+    <app-fund-list [title]="'Avail Funds for ' + (form_ccb ? form_ccb : '...')" [get_avail_funds]="true" [ccb]="form_ccb"></app-fund-list>
+</div>

@@ -15,7 +15,10 @@ import { Break_Model } from 'src/app/models/break';
 export class FundListComponent implements OnInit {
   funds: Fund_Model[];
 
+  @Input() title: string = 'Funds'
   @Input() get_breaks: boolean = false;
+  @Input() get_avail_funds: boolean = false;
+  @Input() ccb: string = ''
 
   constructor(private api: ApiService) { }
 
@@ -61,8 +64,26 @@ export class FundListComponent implements OnInit {
       }
       this.funds = funds_temp.filter(fund => fund.avail < 0)
     }
+    else if (this.get_avail_funds) {
+      const data: any = await this.api.get_avail_funds(this.ccb).toPromise()
+      let funds_temp: Fund_Model[]
+      funds_temp = data[key.funds];
+      funds_temp = funds_temp.map((data: any) => {
+        return new Fund_Model(
+          data[key.ccy], data[key.deal_id], data[key.ini], data[key.kold],
+          data[key.princ], data[key.venc], data[key.princ], undefined
+        )
+      });
+      this.funds = funds_temp
+      console.log(this.funds);
+      
+    }
     else {
       this.funds = funds_temp
     }
+  }
+
+  ngOnChanges(): void {
+    this.ngOnInit()
   }
 }
