@@ -1,3 +1,4 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/api/api.service';
 import { key } from 'src/app/common/global_values';
@@ -40,7 +41,22 @@ export class ChangesPageComponent implements OnInit {
   }
 
   async confirm_btn_handler(ccb: string, kold: string, override: boolean = false) {
-    await this.api.change_fund(ccb, kold, override).toPromise();
-    window.location.reload();
+    let change_successful: boolean
+    try {
+      await this.api.change_fund(ccb, kold, override).toPromise();
+      change_successful = true
+    }
+    catch (error) {
+      change_successful = false
+      if (error instanceof HttpErrorResponse) {
+        alert('Unable to fund this Desemb. Check maturities or override operation.')
+      }
+      else {
+        alert('Unknown error...')
+      }
+    }
+    if (change_successful) {
+      window.location.reload();
+    }
   }
 }
