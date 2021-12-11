@@ -33,7 +33,3 @@ Run command: `npm run start-front-local`
 Build project: `npm run build`
 
 Deploy to server: `npm run start-front-server`
-
-### **Backend**
-
-Run command: `npm run start-back`
