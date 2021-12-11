@@ -16,7 +16,7 @@
     <mat-checkbox [(ngModel)]="override">override?</mat-checkbox>
     <br>
     <input placeholder="CCB to override" [disabled]="!override" [type]="override ? 'text' : 'hidden'" [(ngModel)]="override_ccb">
-    <input placeholder="KOLD to override" [disabled]="!override" [type]="override ? 'text' : 'hidden'" [(ngModel)]="override_kold">
+    <input placeholder="KOLD to override (empty to remove current fund)" title="KOLD to override (empty to remove current fund)" [disabled]="!override" [type]="override ? 'text' : 'hidden'" [(ngModel)]="override_kold">
     <br>
     <br>
     <app-desemb-list [get_all_desembs]="false"></app-desemb-list>
