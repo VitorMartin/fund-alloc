@@ -1,6 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { pjson } from './common/global_values';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -20,10 +21,10 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'fund-alloc'`, () => {
+  it(`should have as title '${pjson.name}'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('fund-alloc');
+    expect(app.title).toEqual(pjson.name);
   });
 
   it('should render title', () => {

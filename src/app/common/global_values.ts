@@ -1,3 +1,8 @@
+export const pjson = {
+    name: 'Fund Alloc',
+    version: '3.0'
+}
+
 export const basedate = new Date().toISOString().split('T')[0];
 
 export const http_config = {
