@@ -1,6 +1,6 @@
 {
   "name": "fund-alloc",
-  "version": "0.0.0",
+  "version": "3.0.0",
   "scripts": {
     "ng": "ng",
     "start-back": "start /WAIT /B ./fund_alloc_api.exe.lnk",
